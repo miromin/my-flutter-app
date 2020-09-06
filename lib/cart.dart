@@ -23,51 +23,49 @@ class _CartState extends State<Cart> {
         appBar: AppBar(
           title: Text('Cart'),
         ),
-        body: Column(
-            children: [
-              Expanded(
-                child: ListView.builder(
-                    itemCount: _cart.length,
-                    itemBuilder: (context, index) {
-                      var item = _cart[index];
-                      return Padding(
-                        padding:
-                        const EdgeInsets.symmetric(horizontal: 8.0, vertical: 2.0),
-                        child: Card(
-                          elevation: 4.0,
-                          child: ListTile(
-                            leading: Icon(
-                              item.icon,
-                              color: item.color,
-                            ),
-                            title: Text(item.name),
-                            trailing: GestureDetector(
-                                child: Icon(
-                                  Icons.remove_circle,
-                                  color: Colors.red,
-                                ),
-                                onTap: () {
-                                  setState(() {
-                                    _cart.remove(item);
-                                  });
-                                }),
-                          ),
+        body: Column(children: [
+          Expanded(
+            child: ListView.builder(
+                itemCount: _cart.length,
+                itemBuilder: (context, index) {
+                  var item = _cart[index];
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0, vertical: 2.0),
+                    child: Card(
+                      elevation: 4.0,
+                      child: ListTile(
+                        leading: Icon(
+                          item.icon,
+                          color: item.color,
                         ),
-                      );
-                    }),
-              ),
-              RaisedButton(
-                onPressed: () {
-                  email();
-                },
-                child: const Text('Confirm', style: TextStyle(fontSize: 20)),
-                color: Colors.blue,
-                textColor: Colors.white,
-                elevation: 5,
-              )
-            ]),
-        resizeToAvoidBottomInset: false
-    );
+                        title: Text(item.name),
+                        trailing: GestureDetector(
+                            child: Icon(
+                              Icons.remove_circle,
+                              color: Colors.red,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                _cart.remove(item);
+                              });
+                            }),
+                      ),
+                    ),
+                  );
+                }),
+          ),
+          RaisedButton(
+            onPressed: () {
+              email();
+            },
+            child: const Text('Confirm', style: TextStyle(fontSize: 20)),
+            color: Colors.blue,
+            textColor: Colors.white,
+            elevation: 5,
+          )
+        ]),
+        resizeToAvoidBottomInset: false);
   }
 }
 
@@ -84,14 +82,18 @@ email() async {
     ..recipients.add('miroslav@luno.com') //recipent email
 //    ..ccRecipients.addAll(['destCc1@example.com', 'destCc2@example.com']) //cc Recipents emails
 //    ..bccRecipients.add(Address('bccAddress@example.com')) //bcc Recipents emails
-    ..subject = 'Test Dart Mailer library :: 😀 :: ${DateTime.now()}' //subject of the email
-    ..text = 'This is the plain text.\nThis is line 2 of the text part.'; //body of the email
+    ..subject =
+        'Test Dart Mailer library :: 😀 :: ${DateTime.now()}' //subject of the email
+    ..text =
+        'This is the plain text.\nThis is line 2 of the text part.'; //body of the email
 
   try {
     final sendReport = await send(message, smtpServer);
-    print('Message sent: ' + sendReport.toString()); //print if the email is sent
+    print(
+        'Message sent: ' + sendReport.toString()); //print if the email is sent
   } on MailerException catch (e) {
-    print('Message not sent. \n'+ e.toString()); //print if the email is not sent
+    print(
+        'Message not sent. \n' + e.toString()); //print if the email is not sent
     // e.toString() will show why the email is not sending
   }
 }
