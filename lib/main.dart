@@ -226,6 +226,66 @@ class _MyHomePageState extends State<MyHomePage> {
         icon: Icons.laptop_mac,
         color: Colors.blueGrey,
       ),
+      Dish(
+        name: 'Chicken Zinger',
+        icon: Icons.fastfood,
+        color: Colors.amber,
+      ),
+      Dish(
+        name: 'Chicken Zinger without chicken',
+        icon: Icons.print,
+        color: Colors.deepOrange,
+      ),
+      Dish(
+        name: 'Rice',
+        icon: Icons.child_care,
+        color: Colors.brown,
+      ),
+      Dish(
+        name: 'Beef burger without beef',
+        icon: Icons.whatshot,
+        color: Colors.green,
+      ),
+      Dish(
+        name: 'Laptop without OS',
+        icon: Icons.laptop,
+        color: Colors.purple,
+      ),
+      Dish(
+        name: 'Mac wihout macOS',
+        icon: Icons.laptop_mac,
+        color: Colors.blueGrey,
+      ),
+      Dish(
+        name: 'Chicken Zinger',
+        icon: Icons.fastfood,
+        color: Colors.amber,
+      ),
+      Dish(
+        name: 'Chicken Zinger without chicken',
+        icon: Icons.print,
+        color: Colors.deepOrange,
+      ),
+      Dish(
+        name: 'Rice',
+        icon: Icons.child_care,
+        color: Colors.brown,
+      ),
+      Dish(
+        name: 'Beef burger without beef',
+        icon: Icons.whatshot,
+        color: Colors.green,
+      ),
+      Dish(
+        name: 'Laptop without OS',
+        icon: Icons.laptop,
+        color: Colors.purple,
+      ),
+      Dish(
+        name: 'Mac wihout macOS',
+        icon: Icons.laptop_mac,
+        color: Colors.blueGrey,
+      ),
     ];
 
     setState(() {
