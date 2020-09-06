@@ -200,49 +200,49 @@ class _MyHomePage1State extends State<MyHomePage1> {
     );
   }
 
-  ListView _buildListView() {
-    return ListView.builder(
-      itemCount: _dishes.length,
-      itemBuilder: (context, index) {
-        var item = _dishes[index];
-        return Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 8.0,
-            vertical: 2.0,
-          ),
-          child: Card(
-            elevation: 4.0,
-            child: ListTile(
-              leading: Icon(
-                item.icon,
-                color: item.color,
-              ),
-              title: Text(item.name),
-              trailing: GestureDetector(
-                child: (!_cartList.contains(item))
-                    ? Icon(
-                        Icons.add_circle,
-                        color: Colors.green,
-                      )
-                    : Icon(
-                        Icons.remove_circle,
-                        color: Colors.red,
-                      ),
-                onTap: () {
-                  setState(() {
-                    if (!_cartList.contains(item))
-                      _cartList.add(item);
-                    else
-                      _cartList.remove(item);
-                  });
-                },
-              ),
-            ),
-          ),
-        );
-      },
-    );
-  }
+//  ListView _buildListView() {
+//    return ListView.builder(
+//      itemCount: _dishes.length,
+//      itemBuilder: (context, index) {
+//        var item = _dishes[index];
+//        return Padding(
+//          padding: const EdgeInsets.symmetric(
+//            horizontal: 8.0,
+//            vertical: 2.0,
+//          ),
+//          child: Card(
+//            elevation: 4.0,
+//            child: ListTile(
+//              leading: Icon(
+//                item.icon,
+//                color: item.color,
+//              ),
+//              title: Text(item.name),
+//              trailing: GestureDetector(
+//                child: (!_cartList.contains(item))
+//                    ? Icon(
+//                        Icons.add_circle,
+//                        color: Colors.green,
+//                      )
+//                    : Icon(
+//                        Icons.remove_circle,
+//                        color: Colors.red,
+//                      ),
+//                onTap: () {
+//                  setState(() {
+//                    if (!_cartList.contains(item))
+//                      _cartList.add(item);
+//                    else
+//                      _cartList.remove(item);
+//                  });
+//                },
+//              ),
+//            ),
+//          ),
+//        );
+//      },
+//    );
+//  }
 
   GridView _buildGridView() {
     return GridView.builder(
