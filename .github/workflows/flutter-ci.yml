@@ -43,7 +43,6 @@ jobs:
 
     # Build apk. (debug)
     - run: flutter build apk --debug
-    - run: ls build/app/outputs/flutter-apk
     # Upload generated apk to the artifacts. (debug)
     - uses: actions/upload-artifact@v1
       with:
