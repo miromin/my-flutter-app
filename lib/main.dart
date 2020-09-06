@@ -271,7 +271,7 @@ class _MyHomePage1State extends State<MyHomePage1> {
                       Text(
                         item.name,
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.subhead,
+                        style: Theme.of(context).textTheme.subtitle1,
                       )
                     ],
                   ),
