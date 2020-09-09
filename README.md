@@ -15,6 +15,17 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## Useful Info
+
 For iOS builds, sometimes after updating pods, environment needs to be updated to point to
 the latest gems, and might need to run:
   export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
+
+To build iOS release, run:
+```
+flutter build ios
+```
+To build iOS debug, run:
+```
+flutter build ios --debug --no-codesign
+```
